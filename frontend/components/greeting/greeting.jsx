@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
-    <div className="header">
+    <div className="concert-image">
+    {/* <div className="concert-image"></div> */}
     <h2 className="brand" >WaveCloud</h2>
       <nav className="login-signup">
     <Link to="/login">Sign in</Link>
     &nbsp;or&nbsp;
     <Link to="/signup">Create account</Link>
   </nav>
-  
   </div>
     
   );
