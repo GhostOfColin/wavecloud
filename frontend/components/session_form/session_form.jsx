@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import DemoLogin from './demo_login_button';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demo = this.demo.bind(this);
   }
 
   update(field) {
@@ -36,15 +38,30 @@ class SessionForm extends React.Component {
     );
   }
 
+  demo(e) {
+    e.preventDefault();
+    this.props.login({username: "guest", password: "password"})
+  }
+
+  componentDidMount() {
+    this.props.clearErrors()
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors()
+  }
+
   render() {
     return (
       <div className="modal is-open">
         <form className="modal-form" onSubmit={this.handleSubmit}>
-        <span class="modal-close js-modal-close">&times;</span>
+        <Link to="/"><span className="modal-close js-modal-close">x</span></Link>  
           <br/>
           Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
+            <div>
+            </div>
             <br/>
             <label>Username:
               <input type="text"
@@ -67,7 +84,7 @@ class SessionForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.formType} /> 
             <br/>
             <br/>
-            <DemoLogin/>
+            <button className="guest-button" onClick={this.demo} >Try it as a Guest</button>
           </div>
         </form>
         
