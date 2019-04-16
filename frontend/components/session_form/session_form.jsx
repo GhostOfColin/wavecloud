@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import DemoLogin from './demo_login_button';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -39,9 +40,8 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to BenchBnB!
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
+          Please {this.props.formType}, {this.props.navLink} or <DemoLogin/>
           {this.renderErrors()}
           <div className="login-form">
             <br/>

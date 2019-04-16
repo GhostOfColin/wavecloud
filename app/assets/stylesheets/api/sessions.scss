@@ -1,3 +1,21 @@
 // Place all the styles related to the api::sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header {
+  display: flex;
+  background-color: aquamarine;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.brand {
+  margin-left: 25px;
+
+}
+
+.login-signup {
+  margin-top: 25px;
+  margin-right: 25px;
+}
