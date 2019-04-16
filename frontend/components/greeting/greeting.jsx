@@ -3,16 +3,33 @@ import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
+
+    <div>
+
     <div className="concert-image">
-    {/* <div className="concert-image"></div> */}
-    <h2 className="brand" >WaveCloud</h2>
-      <nav className="login-signup">
-    <Link to="/login">Sign in</Link>
-    &nbsp;or&nbsp;
-    <Link to="/signup">Create account</Link>
-  </nav>
-  </div>
     
+    <h2 className="brand" >WaveCloud</h2>
+
+    <nav className="login-signup">
+      <Link to="/login">Sign in</Link>
+      &nbsp;or&nbsp;
+      <Link to="/signup">Create account</Link>
+    </nav>
+
+  </div>
+  <h2 className="front-hero"> What's next in music is first in WaveCloud</h2>
+  <p className="front-sidekick">
+  Upload your first track and begin your journey.<br></br>
+  WaveCloud gives you space to create, 
+  find your fans, and connect with other artists.
+  </p>
+    <form className="header-search">
+      <input className="header-search-bar" placeholder="Search for artists, bands, tracks, podcasts" type="search"></input>
+      <button className="header-search-submit" type="submit">Search</button> or <button className="up-button">Upload your own</button>
+    </form>
+  
+    </div>
+
   );
   const personalGreeting = () => (
     <hgroup className="header-group">

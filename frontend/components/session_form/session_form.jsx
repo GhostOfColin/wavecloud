@@ -38,10 +38,11 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+      <div className="modal is-open">
+        <form className="modal-form" onSubmit={this.handleSubmit}>
+        <span class="modal-close js-modal-close">&times;</span>
           <br/>
-          Please {this.props.formType}, {this.props.navLink} or <DemoLogin/>
+          Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
@@ -53,6 +54,7 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
+            <br/>
             <label>Password:
               <input type="password"
                 value={this.state.password}
@@ -61,10 +63,17 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <br/>
+            <input className="session-submit" type="submit" value={this.props.formType} /> 
+            <br/>
+            <br/>
+            <DemoLogin/>
           </div>
         </form>
+        
       </div>
+
+
     );
   }
 }
