@@ -15,11 +15,11 @@ const Greeting = ({ currentUser, logout }) => {
       <h2 className="brand" >WaveCloud</h2>
     </div>
     
-
+    
     <nav className="login-signup">
-      <Link to="/login">Sign in</Link>
-      &nbsp;or&nbsp;
-      <Link to="/signup">Create account</Link>
+      <Link to="/login"><button className="sign-in-button">Sign in</button></Link>
+      <Link to="/signup"><button className="create-account-button" >Create account</button></Link>
+      <Link to="/"> <button className="creators-button" >For Creators</button> </Link>
     </nav>
 
   </div>

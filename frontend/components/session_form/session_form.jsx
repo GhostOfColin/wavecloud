@@ -53,6 +53,7 @@ class SessionForm extends React.Component {
 
   render() {
     return (
+      
       <div className="modal is-open">
         <form className="modal-form" onSubmit={this.handleSubmit}>
         <Link to="/"><span className="modal-close js-modal-close">x</span></Link>  

@@ -122,6 +122,7 @@
   font-size: 16px;
   width: 200px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .button-wrapper {
@@ -139,6 +140,48 @@
   font-size: 16px;
   width: 200px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-in-button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border-color: white;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  border-radius: 3px;
+  padding: 5px;
+  width: 80px;
+  color: white;
+  border-width: 1px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.create-account-button {
+  background-color: orangered;
+  border: none;
+  color: white;
+  padding: 8px;
+  font-size: 14px;
+  width: 135px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.creators-button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  padding: 5px;
+  width: 100px;
+  color: white;
+  height: 30px;
+  font-size: 14px;
 }
 
 
